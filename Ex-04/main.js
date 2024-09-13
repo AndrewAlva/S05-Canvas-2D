@@ -43,7 +43,8 @@ function renderImage() {
         Ver la documentación en Mozilla docs para obtener más info: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage
     */
   
-  CTX.drawImage(downloadingImage, imagePos.x1, imagePos.y1);
+  // drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
+  CTX.drawImage(downloadingImage, 50, 50, 100, 100, 0, 0, 800, 600);
 
   
   /*///// 4. Actualizaremos la posición de la imagen antes de llamar renderImage en el siguiente frame ///*/
@@ -74,7 +75,7 @@ downloadingImage.onload = function(){
 
 
 /*///// 6.3 Asignar el "origen" o "source" de la imagen que queremos cargar, esto va a disparar inmediatamente la descarga (o "loading") y cuando termine, como si fuera un evento, disparará la función onload() que creamos en el paso anterior ///*/
-downloadingImage.src = "https://images.unsplash.com/photo-1725961476494-efa87ae3106a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+downloadingImage.src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/DVD-Video_Logo.svg/500px-DVD-Video_Logo.svg.png"
 
 
 
